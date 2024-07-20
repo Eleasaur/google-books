@@ -6,7 +6,7 @@ export const getBooksBySearchTerm = async (searchTerm) => {
   }
   const response = await fetch(`${BASE_URL}volumes?q=${searchTerm}`);
   if (!response.ok) {
-    throw new Error("Failed to fetch");
+    throw new Error("Failed to fetch data");
   }
   const data = await response.json();
   if (data.totalItems === 0) {

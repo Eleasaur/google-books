@@ -1,0 +1,18 @@
+.bookList {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  border: 2px solid red;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  gap: 1em;
+}
+
+.img {
+  width: 200px;
+  height: auto;
+}
