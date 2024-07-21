@@ -31,7 +31,7 @@ const BookCard = ({ item }) => {
       </button>
       <BookModal isOpen={openModal} onClose={toggleOpen}>
         <h3>
-          {item.volumeInfo.title} - {item.volumeInfo.authors.join(", ")}
+          {item.volumeInfo.title} - {item.volumeInfo?.authors?.join(", ")}
         </h3>
         <img
           className={styles.img}
