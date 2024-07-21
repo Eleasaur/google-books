@@ -24,21 +24,3 @@
   border: 2px solid $google_blue;
   border-radius: 1em;
 }
-
-.book {
-  min-width: 300px;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25em;
-  padding: 0em 1em;
-  background-color: $medium_bg;
-  border-radius: 1em;
-  color: $light_text;
-}
-
-.img {
-  width: 200px;
-  height: auto;
-}

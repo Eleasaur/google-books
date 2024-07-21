@@ -1,0 +1,19 @@
+@import "/public/variables";
+.book {
+  min-width: 300px;
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25em;
+  padding: 1em;
+  background-color: $medium_bg;
+  border-radius: 1em;
+  color: $light_text;
+}
+
+.img {
+  width: 200px;
+  height: auto;
+}
