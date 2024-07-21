@@ -6,7 +6,9 @@ export const getBooksBySearchTerm = async (searchTerm) => {
       "To search for a book, you must provide a search term above."
     );
   }
-  const response = await fetch(`${BASE_URL}volumes?q=${searchTerm}`);
+  const response = await fetch(
+    `${BASE_URL}volumes?q=${searchTerm}&maxResults=12`
+  );
   if (!response.ok) {
     throw new Error("Failed to fetch data.");
   }
