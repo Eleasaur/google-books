@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./BookCard.module.scss";
-import Modal from "../BookModal/BookModal";
+import BookModal from "../BookModal/BookModal";
 
 const BookCard = ({ item }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -18,8 +18,10 @@ const BookCard = ({ item }) => {
         src={item.volumeInfo?.imageLinks?.thumbnail}
       />
       <p>{item.volumeInfo?.description}</p>
-      <button onClick={toggleOpen}>See more info</button>
-      <Modal isOpen={openModal} onClose={toggleOpen}>
+      <button className={styles.modalBtn} onClick={toggleOpen}>
+        See more info
+      </button>
+      <BookModal isOpen={openModal} onClose={toggleOpen}>
         <h3>
           {item.volumeInfo.title} - {item.volumeInfo.authors.join(", ")}
         </h3>
@@ -45,7 +47,7 @@ const BookCard = ({ item }) => {
             ? item.volumeInfo?.categories?.join(" ")
             : "Not found"}
         </p>
-      </Modal>
+      </BookModal>
     </div>
   );
 };

@@ -17,3 +17,18 @@
   width: 200px;
   height: auto;
 }
+
+.modalBtn {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid $google_yellow;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: $dark_bg;
+  color: $google_yellow;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: $google_yellow;
+    color: $dark_bg;
+  }
+}

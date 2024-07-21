@@ -12,8 +12,13 @@ const SearchBar = ({ onSubmit }) => {
   };
   return (
     <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
-      <input type="text" placeholder="search term " name="search" />
-      <button>Search</button>
+      <input
+        className={styles.input}
+        type="text"
+        placeholder="search term "
+        name="search"
+      />
+      <button className={styles.searchBtn}>Search</button>
     </form>
   );
 };
