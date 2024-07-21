@@ -11,8 +11,8 @@ const BookCard = ({ item }) => {
 
   return (
     <div key={item.id} className={styles.book}>
-      <h3>{item.volumeInfo.title}</h3>
-      <h3>{item.volumeInfo.authors.join(", ")}</h3>
+      <h3>{item.volumeInfo?.title}</h3>
+      <h3>{item.volumeInfo?.authors?.join(", ")}</h3>
       <img
         className={styles.img}
         src={
@@ -21,7 +21,11 @@ const BookCard = ({ item }) => {
             : "/public/noImage.png"
         }
       />
-      <p>{item.volumeInfo?.description}</p>
+      <p>
+        {item.volumeInfo?.description
+          ? item.volumeInfo?.description
+          : "No description found."}
+      </p>
       <button className={styles.modalBtn} onClick={toggleOpen}>
         See more info
       </button>
