@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import styles from "./SearchBar.module.scss";
 
 const SearchBar = ({ onSubmit }) => {
   const formRef = useRef(null);
@@ -10,8 +11,8 @@ const SearchBar = ({ onSubmit }) => {
     formRef.current.reset();
   };
   return (
-    <form onSubmit={handleSubmit} ref={formRef}>
-      <input type="text" placeholder="search" name="search" />
+    <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
+      <input type="text" placeholder="search term " name="search" />
       <button>Search</button>
     </form>
   );

@@ -1,0 +1,7 @@
+.fetch_message {
+  text-align: center;
+  &_error {
+    text-align: center;
+    color: #9c0000;
+  }
+}
