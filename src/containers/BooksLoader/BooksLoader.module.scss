@@ -2,8 +2,10 @@
 .fetch_message {
   text-align: center;
   color: $google_green;
+  padding: 0em 1em;
   &_error {
     text-align: center;
     color: $google_red;
+    padding: 0em 1em;
   }
 }
