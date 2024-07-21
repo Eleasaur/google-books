@@ -21,6 +21,7 @@ const BookModal = ({ isOpen, onClose, children }) => {
           background: "#f8f8ef",
           minWidth: "300px",
           width: "65%",
+          maxWidth: "650px",
           color: "#2c2c2c",
           margin: "auto",
           padding: "1em",
