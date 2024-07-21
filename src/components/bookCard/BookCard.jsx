@@ -15,7 +15,11 @@ const BookCard = ({ item }) => {
       <h3>{item.volumeInfo.authors.join(", ")}</h3>
       <img
         className={styles.img}
-        src={item.volumeInfo?.imageLinks?.thumbnail}
+        src={
+          item.volumeInfo?.imageLinks?.thumbnail
+            ? item.volumeInfo?.imageLinks?.thumbnail
+            : "/public/noImage.png"
+        }
       />
       <p>{item.volumeInfo?.description}</p>
       <button className={styles.modalBtn} onClick={toggleOpen}>
@@ -27,7 +31,11 @@ const BookCard = ({ item }) => {
         </h3>
         <img
           className={styles.img}
-          src={item.volumeInfo?.imageLinks?.thumbnail}
+          src={
+            item.volumeInfo?.imageLinks?.thumbnail
+              ? item.volumeInfo?.imageLinks?.thumbnail
+              : "/public/noImage.png"
+          }
         />
         <p>
           Published:{" "}
