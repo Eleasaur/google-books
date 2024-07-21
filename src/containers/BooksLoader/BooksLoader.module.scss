@@ -1,7 +1,9 @@
+@import "/public/variables";
 .fetch_message {
   text-align: center;
+  color: $google_green;
   &_error {
     text-align: center;
-    color: #9c0000;
+    color: $google_red;
   }
 }

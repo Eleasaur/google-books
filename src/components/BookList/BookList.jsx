@@ -6,7 +6,7 @@ const BookList = ({ books }) => {
   const { searchVal } = useContext(SearchContext);
   return (
     <div className={styles.wrapper}>
-      <h2>
+      <h2 className={styles.foundBooks}>
         Found {books.totalItems} books for the search term: {searchVal}
       </h2>
       <div className={styles.bookList}>
